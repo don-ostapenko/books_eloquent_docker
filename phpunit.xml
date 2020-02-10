@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="vendor/phpunit/phpunit/phpunit.xsd"
+         bootstrap="vendor/autoload.php"
+         cacheResult="false"
+         stopOnFailure="false"
+         verbose="true"
+         colors="true"
+         beStrictAboutTestsThatDoNotTestAnything="true">
+    <testsuites>
+        <testsuite name="unit">
+            <directory>./tests/Unit</directory>
+        </testsuite>
+    </testsuites>
+
+    <php>
+        <ini name="error-reporting" value="-1"/>
+        <cookie name="foo" value="bar"/>
+        <cookie name="auth_token" value="2:947daad1c0a70c097725824e94da088cad4d9454"/>
+    </php>
+
+    <filter>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">./src</directory>
+            <exclude>
+                <directory>./src/Exceptions</directory>
+                <directory>./src/Migrations</directory>
+                <directory>./src/Seeders</directory>
+                <directory>./src/Services/Di/Config</directory>
+                <directory>./src/Services/Di/Reference</directory>
+                <directory>./src/Models/Tags</directory>
+                <file>./src/Services/Migration.php</file>
+                <file>./src/Initialization.php</file>
+            </exclude>
+        </whitelist>
+    </filter>
+</phpunit>

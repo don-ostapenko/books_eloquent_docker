@@ -1,0 +1,50 @@
+version: "3.4"
+services:
+
+  #PHP-APACHE
+  web:
+    build: ./docker/php
+    container_name: web
+    ports:
+      - '8001:80'
+    volumes:
+      - ${APP_PATH_HOST}:${APP_PATH_CONTAINER}
+    environment:
+      XDEBUG_CONFIG: "remote_host=host.docker.internal remote_enable=1"
+      PHP_IDE_CONFIG: "serverName=Docker"
+    networks:
+      - default
+
+  #MYSQL
+  mysql:
+    image: mysql:5.7
+    container_name: mysql
+    ports:
+      - '3306:3306'
+    volumes:
+      - ./docker/mysql/data:/var/lib/mysql
+      - ./docker/mysql/my.cnf:/etc/mysql/my.cnf
+    environment:
+      MYSQL_DATABASE: ${DB_DATABASE}
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+    networks:
+      - default
+
+  #PHPMYADMIN
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
+    ports:
+      - '8000:80'
+    links:
+      - mysql
+    restart: always
+    environment:
+      PMA_HOST: mysql
+      MYSQL_DATABASE: ${DB_DATABASE}
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+    networks:
+      - default
+
+networks:
+  default:

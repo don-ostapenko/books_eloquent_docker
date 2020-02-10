@@ -1,0 +1,11 @@
+# no .log files
+*.log
+
+# no .idea dir
+.idea/
+
+# no vendor dir
+vendor/
+
+# no .phpunit.result.cache file
+.phpunit.result.cache

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Dashboard for /var/www/src</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="_css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="_css/nv.d3.min.css" rel="stylesheet" type="text/css">
+  <link href="_css/style.css" rel="stylesheet" type="text/css">
+  <link href="_css/custom.css" rel="stylesheet" type="text/css">
+ </head>
+ <body>
+  <header>
+   <div class="container-fluid">
+    <div class="row">
+     <div class="col-md-12">
+      <nav aria-label="breadcrumb">
+       <ol class="breadcrumb">
+         <li class="breadcrumb-item"><a href="index.html">/var/www/src</a></li>
+         <li class="breadcrumb-item active">(Dashboard)</li>
+
+       </ol>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </header>
+  <div class="container-fluid">
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Classes</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="classCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="classComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Controllers/AbstractController.php.html#14">App\Controllers\AbstractController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/AdminController.php.html#12">App\Controllers\AdminController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/BooksController.php.html#10">App\Controllers\BooksController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/UsersController.php.html#9">App\Controllers\UsersController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Services/Di/DiContainer.php.html#13">App\Services\Di\DiContainer</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Models/Books/Book.php.html#12">App\Models\Books\Book</a></td><td class="text-right">50%</td></tr>
+       <tr><td><a href="Support/Paths.php.html#5">App\Support\Paths</a></td><td class="text-right">66%</td></tr>
+       <tr><td><a href="Support/UsersAuth.php.html#9">App\Support\UsersAuth</a></td><td class="text-right">70%</td></tr>
+       <tr><td><a href="Models/Users/User.php.html#9">App\Models\Users\User</a></td><td class="text-right">75%</td></tr>
+       <tr><td><a href="Services/Router/Router.php.html#9">App\Services\Router\Router</a></td><td class="text-right">80%</td></tr>
+       <tr><td><a href="View/View.php.html#5">App\View\View</a></td><td class="text-right">83%</td></tr>
+       <tr><td><a href="Services/Pagination.php.html#8">App\Services\Pagination</a></td><td class="text-right">86%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Services/Di/DiContainer.php.html#13">App\Services\Di\DiContainer</a></td><td class="text-right">812</td></tr>
+       <tr><td><a href="Controllers/AdminController.php.html#12">App\Controllers\AdminController</a></td><td class="text-right">182</td></tr>
+       <tr><td><a href="Controllers/BooksController.php.html#10">App\Controllers\BooksController</a></td><td class="text-right">182</td></tr>
+       <tr><td><a href="Models/Books/Book.php.html#12">App\Models\Books\Book</a></td><td class="text-right">64</td></tr>
+       <tr><td><a href="Controllers/UsersController.php.html#9">App\Controllers\UsersController</a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="Services/Pagination.php.html#8">App\Services\Pagination</a></td><td class="text-right">14</td></tr>
+       <tr><td><a href="Support/UsersAuth.php.html#9">App\Support\UsersAuth</a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Services/Router/Router.php.html#9">App\Services\Router\Router</a></td><td class="text-right">11</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Methods</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="methodCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="methodComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Controllers/AbstractController.php.html#53"><abbr title="App\Controllers\AbstractController::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Models/Books/Book.php.html#117"><abbr title="App\Models\Books\Book::createBookFromData">createBookFromData</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Support/UsersAuth.php.html#34"><abbr title="App\Support\UsersAuth::createToken">createToken</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Support/Paths.php.html#12"><abbr title="App\Support\Paths::getPathToConfigFile">getPathToConfigFile</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Services/Di/DiContainer.php.html#182"><abbr title="App\Services\Di\DiContainer::initializeService">initializeService</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Services/Di/DiContainer.php.html#150"><abbr title="App\Services\Di\DiContainer::resolveArguments">resolveArguments</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Services/Di/DiContainer.php.html#114"><abbr title="App\Services\Di\DiContainer::createService">createService</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Services/Di/DiContainer.php.html#91"><abbr title="App\Services\Di\DiContainer::hasParameter">hasParameter</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Services/Di/DiContainer.php.html#72"><abbr title="App\Services\Di\DiContainer::getParameter">getParameter</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Services/Di/DiContainer.php.html#64"><abbr title="App\Services\Di\DiContainer::has">has</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Services/Di/DiContainer.php.html#47"><abbr title="App\Services\Di\DiContainer::get">get</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Services/Di/DiContainer.php.html#35"><abbr title="App\Services\Di\DiContainer::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Models/Users/User.php.html#35"><abbr title="App\Models\Users\User::isAdmin">isAdmin</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/AbstractController.php.html#63"><abbr title="App\Controllers\AbstractController::renderPagination">renderPagination</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Models/Books/Book.php.html#134"><abbr title="App\Models\Books\Book::updateBookFromData">updateBookFromData</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="View/View.php.html#16"><abbr title="App\View\View::setVar">setVar</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/BooksController.php.html#12"><abbr title="App\Controllers\BooksController::indexBooks">indexBooks</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/AdminController.php.html#33"><abbr title="App\Controllers\AdminController::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/AdminController.php.html#44"><abbr title="App\Controllers\AdminController::indexAdmin">indexAdmin</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/AdminController.php.html#54"><abbr title="App\Controllers\AdminController::searchByTitleAdmin">searchByTitleAdmin</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/AdminController.php.html#75"><abbr title="App\Controllers\AdminController::addBook">addBook</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/AdminController.php.html#142"><abbr title="App\Controllers\AdminController::deleteBook">deleteBook</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/AdminController.php.html#107"><abbr title="App\Controllers\AdminController::editBook">editBook</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/BooksController.php.html#53"><abbr title="App\Controllers\BooksController::filterHandler">filterHandler</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/BooksController.php.html#67"><abbr title="App\Controllers\BooksController::paginationHandler">paginationHandler</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/BooksController.php.html#76"><abbr title="App\Controllers\BooksController::searchByTitle">searchByTitle</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/BooksController.php.html#97"><abbr title="App\Controllers\BooksController::filterReset">filterReset</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/UsersController.php.html#16"><abbr title="App\Controllers\UsersController::signIn">signIn</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/UsersController.php.html#52"><abbr title="App\Controllers\UsersController::signOut">signOut</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Services/Pagination.php.html#105"><abbr title="App\Services\Pagination::initCurrentPage">initCurrentPage</abbr></a></td><td class="text-right">50%</td></tr>
+       <tr><td><a href="Models/Books/Book.php.html#68"><abbr title="App\Models\Books\Book::searchBy">searchBy</abbr></a></td><td class="text-right">57%</td></tr>
+       <tr><td><a href="Services/Router/Router.php.html#57"><abbr title="App\Services\Router\Router::initParamsOfRoute">initParamsOfRoute</abbr></a></td><td class="text-right">60%</td></tr>
+       <tr><td><a href="Services/Router/Router.php.html#30"><abbr title="App\Services\Router\Router::checkParam">checkParam</abbr></a></td><td class="text-right">66%</td></tr>
+       <tr><td><a href="Services/Router/Router.php.html#44"><abbr title="App\Services\Router\Router::getRoutes">getRoutes</abbr></a></td><td class="text-right">66%</td></tr>
+       <tr><td><a href="Support/UsersAuth.php.html#53"><abbr title="App\Support\UsersAuth::getUserByToken">getUserByToken</abbr></a></td><td class="text-right">70%</td></tr>
+       <tr><td><a href="Models/Books/Book.php.html#151"><abbr title="App\Models\Books\Book::checkSortType">checkSortType</abbr></a></td><td class="text-right">83%</td></tr>
+       <tr><td><a href="Models/Books/Book.php.html#98"><abbr title="App\Models\Books\Book::sortBy">sortBy</abbr></a></td><td class="text-right">85%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Services/Di/DiContainer.php.html#114"><abbr title="App\Services\Di\DiContainer::createService">createService</abbr></a></td><td class="text-right">56</td></tr>
+       <tr><td><a href="Services/Di/DiContainer.php.html#182"><abbr title="App\Services\Di\DiContainer::initializeService">initializeService</abbr></a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="Services/Di/DiContainer.php.html#150"><abbr title="App\Services\Di\DiContainer::resolveArguments">resolveArguments</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="Controllers/BooksController.php.html#12"><abbr title="App\Controllers\BooksController::indexBooks">indexBooks</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="Controllers/UsersController.php.html#16"><abbr title="App\Controllers\UsersController::signIn">signIn</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="Services/Di/DiContainer.php.html#72"><abbr title="App\Services\Di\DiContainer::getParameter">getParameter</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Services/Di/DiContainer.php.html#47"><abbr title="App\Services\Di\DiContainer::get">get</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Models/Books/Book.php.html#134"><abbr title="App\Models\Books\Book::updateBookFromData">updateBookFromData</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Models/Books/Book.php.html#117"><abbr title="App\Models\Books\Book::createBookFromData">createBookFromData</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Controllers/AdminController.php.html#33"><abbr title="App\Controllers\AdminController::__construct">__construct</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Controllers/BooksController.php.html#76"><abbr title="App\Controllers\BooksController::searchByTitle">searchByTitle</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Controllers/BooksController.php.html#53"><abbr title="App\Controllers\BooksController::filterHandler">filterHandler</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Controllers/AdminController.php.html#107"><abbr title="App\Controllers\AdminController::editBook">editBook</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Controllers/AdminController.php.html#75"><abbr title="App\Controllers\AdminController::addBook">addBook</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Controllers/BooksController.php.html#67"><abbr title="App\Controllers\BooksController::paginationHandler">paginationHandler</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Controllers/AdminController.php.html#54"><abbr title="App\Controllers\AdminController::searchByTitleAdmin">searchByTitleAdmin</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Services/Di/DiContainer.php.html#64"><abbr title="App\Services\Di\DiContainer::has">has</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Services/Di/DiContainer.php.html#91"><abbr title="App\Services\Di\DiContainer::hasParameter">hasParameter</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Services/Pagination.php.html#105"><abbr title="App\Services\Pagination::initCurrentPage">initCurrentPage</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Support/UsersAuth.php.html#53"><abbr title="App\Support\UsersAuth::getUserByToken">getUserByToken</abbr></a></td><td class="text-right">5</td></tr>
+       <tr><td><a href="Models/Books/Book.php.html#151"><abbr title="App\Models\Books\Book::checkSortType">checkSortType</abbr></a></td><td class="text-right">5</td></tr>
+       <tr><td><a href="Services/Router/Router.php.html#44"><abbr title="App\Services\Router\Router::getRoutes">getRoutes</abbr></a></td><td class="text-right">3</td></tr>
+       <tr><td><a href="Models/Books/Book.php.html#98"><abbr title="App\Models\Books\Book::sortBy">sortBy</abbr></a></td><td class="text-right">3</td></tr>
+       <tr><td><a href="Models/Books/Book.php.html#68"><abbr title="App\Models\Books\Book::searchBy">searchBy</abbr></a></td><td class="text-right">2</td></tr>
+       <tr><td><a href="Services/Router/Router.php.html#57"><abbr title="App\Services\Router\Router::initParamsOfRoute">initParamsOfRoute</abbr></a></td><td class="text-right">2</td></tr>
+       <tr><td><a href="Services/Router/Router.php.html#30"><abbr title="App\Services\Router\Router::checkParam">checkParam</abbr></a></td><td class="text-right">2</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <footer>
+    <hr/>
+    <p>
+     <small>Generated by <a href="https://github.com/sebastianbergmann/php-code-coverage" target="_top">php-code-coverage 7.0.10</a> using <a href="https://secure.php.net/" target="_top">PHP 7.4.2</a> with <a href="https://xdebug.org/">Xdebug 2.8.0</a> and <a href="https://phpunit.de/">PHPUnit 8.5.2</a> at Tue Feb 4 19:46:58 UTC 2020.</small>
+    </p>
+   </footer>
+  </div>
+  <script src="_js/jquery.min.js" type="text/javascript"></script>
+  <script src="_js/d3.min.js" type="text/javascript"></script>
+  <script src="_js/nv.d3.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+$(document).ready(function() {
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#classCoverageDistribution svg')
+      .datum(getCoverageDistributionData([5,0,0,0,0,0,1,1,2,3,0,6], "Class Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#methodCoverageDistribution svg')
+      .datum(getCoverageDistributionData([29,0,0,0,0,0,2,3,1,2,0,51], "Method Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getCoverageDistributionData(data, label) {
+    var labels = [
+      '0%',
+      '0-10%',
+      '10-20%',
+      '20-30%',
+      '30-40%',
+      '40-50%',
+      '50-60%',
+      '60-70%',
+      '70-80%',
+      '80-90%',
+      '90-100%',
+      '100%'
+    ];
+    var values = [];
+    $.each(labels, function(key) {
+      values.push({x: labels[key], y: data[key]});
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Cyclomatic Complexity');
+
+    d3.select('#classComplexity svg')
+      .datum(getComplexityData([[0,2,"<a href=\"Controllers\/AbstractController.php.html#14\">App\\Controllers\\AbstractController<\/a>"],[0,13,"<a href=\"Controllers\/AdminController.php.html#12\">App\\Controllers\\AdminController<\/a>"],[0,13,"<a href=\"Controllers\/BooksController.php.html#10\">App\\Controllers\\BooksController<\/a>"],[0,5,"<a href=\"Controllers\/UsersController.php.html#9\">App\\Controllers\\UsersController<\/a>"],[50,19,"<a href=\"Models\/Books\/Book.php.html#12\">App\\Models\\Books\\Book<\/a>"],[75,2,"<a href=\"Models\/Users\/User.php.html#9\">App\\Models\\Users\\User<\/a>"],[0,28,"<a href=\"Services\/Di\/DiContainer.php.html#13\">App\\Services\\Di\\DiContainer<\/a>"],[100,10,"<a href=\"Services\/Http\/ParameterBag.php.html#5\">App\\Services\\Http\\ParameterBag<\/a>"],[100,2,"<a href=\"Services\/Http\/Request.php.html#5\">App\\Services\\Http\\Request<\/a>"],[86.20689655172413,14,"<a href=\"Services\/Pagination.php.html#8\">App\\Services\\Pagination<\/a>"],[100,4,"<a href=\"Services\/Router\/HandlerRouter.php.html#7\">App\\Services\\Router\\HandlerRouter<\/a>"],[80,11,"<a href=\"Services\/Router\/Router.php.html#9\">App\\Services\\Router\\Router<\/a>"],[100,10,"<a href=\"Services\/Validation\/Validation.php.html#5\">App\\Services\\Validation\\Validation<\/a>"],[100,6,"<a href=\"Support\/Cookie.php.html#5\">App\\Support\\Cookie<\/a>"],[66.66666666666666,3,"<a href=\"Support\/Paths.php.html#5\">App\\Support\\Paths<\/a>"],[70,10,"<a href=\"Support\/UsersAuth.php.html#9\">App\\Support\\UsersAuth<\/a>"],[83.33333333333334,3,"<a href=\"View\/View.php.html#5\">App\\View\\View<\/a>"],[100,9,"<a href=\"Services\/Validation\/ValidationBag.php.html#5\">ValidationBag<\/a>"]], 'Class Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Method Complexity');
+
+    d3.select('#methodComplexity svg')
+      .datum(getComplexityData([[0,1,"<a href=\"Controllers\/AbstractController.php.html#53\">App\\Controllers\\AbstractController::__construct<\/a>"],[0,1,"<a href=\"Controllers\/AbstractController.php.html#63\">App\\Controllers\\AbstractController::renderPagination<\/a>"],[0,3,"<a href=\"Controllers\/AdminController.php.html#33\">App\\Controllers\\AdminController::__construct<\/a>"],[0,1,"<a href=\"Controllers\/AdminController.php.html#44\">App\\Controllers\\AdminController::indexAdmin<\/a>"],[0,2,"<a href=\"Controllers\/AdminController.php.html#54\">App\\Controllers\\AdminController::searchByTitleAdmin<\/a>"],[0,3,"<a href=\"Controllers\/AdminController.php.html#75\">App\\Controllers\\AdminController::addBook<\/a>"],[0,3,"<a href=\"Controllers\/AdminController.php.html#107\">App\\Controllers\\AdminController::editBook<\/a>"],[0,1,"<a href=\"Controllers\/AdminController.php.html#142\">App\\Controllers\\AdminController::deleteBook<\/a>"],[0,4,"<a href=\"Controllers\/BooksController.php.html#12\">App\\Controllers\\BooksController::indexBooks<\/a>"],[0,3,"<a href=\"Controllers\/BooksController.php.html#53\">App\\Controllers\\BooksController::filterHandler<\/a>"],[0,2,"<a href=\"Controllers\/BooksController.php.html#67\">App\\Controllers\\BooksController::paginationHandler<\/a>"],[0,3,"<a href=\"Controllers\/BooksController.php.html#76\">App\\Controllers\\BooksController::searchByTitle<\/a>"],[0,1,"<a href=\"Controllers\/BooksController.php.html#97\">App\\Controllers\\BooksController::filterReset<\/a>"],[0,4,"<a href=\"Controllers\/UsersController.php.html#16\">App\\Controllers\\UsersController::signIn<\/a>"],[0,1,"<a href=\"Controllers\/UsersController.php.html#52\">App\\Controllers\\UsersController::signOut<\/a>"],[100,1,"<a href=\"Models\/Books\/Book.php.html#49\">App\\Models\\Books\\Book::tags<\/a>"],[100,1,"<a href=\"Models\/Books\/Book.php.html#57\">App\\Models\\Books\\Book::getSortTypeList<\/a>"],[57.14285714285714,2,"<a href=\"Models\/Books\/Book.php.html#68\">App\\Models\\Books\\Book::searchBy<\/a>"],[100,1,"<a href=\"Models\/Books\/Book.php.html#86\">App\\Models\\Books\\Book::searchByTag<\/a>"],[85.71428571428571,3,"<a href=\"Models\/Books\/Book.php.html#98\">App\\Models\\Books\\Book::sortBy<\/a>"],[0,3,"<a href=\"Models\/Books\/Book.php.html#117\">App\\Models\\Books\\Book::createBookFromData<\/a>"],[0,3,"<a href=\"Models\/Books\/Book.php.html#134\">App\\Models\\Books\\Book::updateBookFromData<\/a>"],[83.33333333333334,5,"<a href=\"Models\/Books\/Book.php.html#151\">App\\Models\\Books\\Book::checkSortType<\/a>"],[100,1,"<a href=\"Models\/Users\/User.php.html#25\">App\\Models\\Users\\User::refreshAuthToken<\/a>"],[0,1,"<a href=\"Models\/Users\/User.php.html#35\">App\\Models\\Users\\User::isAdmin<\/a>"],[0,1,"<a href=\"Services\/Di\/DiContainer.php.html#35\">App\\Services\\Di\\DiContainer::__construct<\/a>"],[0,3,"<a href=\"Services\/Di\/DiContainer.php.html#47\">App\\Services\\Di\\DiContainer::get<\/a>"],[0,2,"<a href=\"Services\/Di\/DiContainer.php.html#64\">App\\Services\\Di\\DiContainer::has<\/a>"],[0,3,"<a href=\"Services\/Di\/DiContainer.php.html#72\">App\\Services\\Di\\DiContainer::getParameter<\/a>"],[0,2,"<a href=\"Services\/Di\/DiContainer.php.html#91\">App\\Services\\Di\\DiContainer::hasParameter<\/a>"],[0,7,"<a href=\"Services\/Di\/DiContainer.php.html#114\">App\\Services\\Di\\DiContainer::createService<\/a>"],[0,4,"<a href=\"Services\/Di\/DiContainer.php.html#150\">App\\Services\\Di\\DiContainer::resolveArguments<\/a>"],[0,6,"<a href=\"Services\/Di\/DiContainer.php.html#182\">App\\Services\\Di\\DiContainer::initializeService<\/a>"],[100,1,"<a href=\"Services\/Http\/ParameterBag.php.html#17\">App\\Services\\Http\\ParameterBag::__construct<\/a>"],[100,1,"<a href=\"Services\/Http\/ParameterBag.php.html#27\">App\\Services\\Http\\ParameterBag::all<\/a>"],[100,1,"<a href=\"Services\/Http\/ParameterBag.php.html#37\">App\\Services\\Http\\ParameterBag::keys<\/a>"],[100,1,"<a href=\"Services\/Http\/ParameterBag.php.html#47\">App\\Services\\Http\\ParameterBag::replace<\/a>"],[100,1,"<a href=\"Services\/Http\/ParameterBag.php.html#56\">App\\Services\\Http\\ParameterBag::add<\/a>"],[100,2,"<a href=\"Services\/Http\/ParameterBag.php.html#69\">App\\Services\\Http\\ParameterBag::get<\/a>"],[100,1,"<a href=\"Services\/Http\/ParameterBag.php.html#80\">App\\Services\\Http\\ParameterBag::set<\/a>"],[100,1,"<a href=\"Services\/Http\/ParameterBag.php.html#92\">App\\Services\\Http\\ParameterBag::has<\/a>"],[100,1,"<a href=\"Services\/Http\/ParameterBag.php.html#102\">App\\Services\\Http\\ParameterBag::remove<\/a>"],[100,1,"<a href=\"Services\/Http\/Request.php.html#39\">App\\Services\\Http\\Request::__construct<\/a>"],[100,1,"<a href=\"Services\/Http\/Request.php.html#52\">App\\Services\\Http\\Request::initialize<\/a>"],[100,1,"<a href=\"Services\/Pagination.php.html#48\">App\\Services\\Pagination::getTotalPagesQty<\/a>"],[100,1,"<a href=\"Services\/Pagination.php.html#56\">App\\Services\\Pagination::getBaseUrl<\/a>"],[100,1,"<a href=\"Services\/Pagination.php.html#64\">App\\Services\\Pagination::get<\/a>"],[100,1,"<a href=\"Services\/Pagination.php.html#72\">App\\Services\\Pagination::getCurrentPage<\/a>"],[100,1,"<a href=\"Services\/Pagination.php.html#80\">App\\Services\\Pagination::getPaginationState<\/a>"],[100,3,"<a href=\"Services\/Pagination.php.html#89\">App\\Services\\Pagination::setLimit<\/a>"],[50,4,"<a href=\"Services\/Pagination.php.html#105\">App\\Services\\Pagination::initCurrentPage<\/a>"],[100,1,"<a href=\"Services\/Pagination.php.html#128\">App\\Services\\Pagination::init<\/a>"],[100,1,"<a href=\"Services\/Pagination.php.html#143\">App\\Services\\Pagination::paginate<\/a>"],[100,1,"<a href=\"Services\/Router\/HandlerRouter.php.html#29\">App\\Services\\Router\\HandlerRouter::__construct<\/a>"],[100,1,"<a href=\"Services\/Router\/HandlerRouter.php.html#39\">App\\Services\\Router\\HandlerRouter::getController<\/a>"],[100,1,"<a href=\"Services\/Router\/HandlerRouter.php.html#47\">App\\Services\\Router\\HandlerRouter::getAction<\/a>"],[100,1,"<a href=\"Services\/Router\/HandlerRouter.php.html#55\">App\\Services\\Router\\HandlerRouter::getParams<\/a>"],[66.66666666666666,2,"<a href=\"Services\/Router\/Router.php.html#30\">App\\Services\\Router\\Router::checkParam<\/a>"],[66.66666666666666,3,"<a href=\"Services\/Router\/Router.php.html#44\">App\\Services\\Router\\Router::getRoutes<\/a>"],[60,2,"<a href=\"Services\/Router\/Router.php.html#57\">App\\Services\\Router\\Router::initParamsOfRoute<\/a>"],[100,4,"<a href=\"Services\/Router\/Router.php.html#73\">App\\Services\\Router\\Router::handleRoute<\/a>"],[100,1,"<a href=\"Services\/Validation\/Validation.php.html#55\">App\\Services\\Validation\\Validation::getValidData<\/a>"],[100,1,"<a href=\"Services\/Validation\/Validation.php.html#65\">App\\Services\\Validation\\Validation::getErrors<\/a>"],[100,2,"<a href=\"Services\/Validation\/Validation.php.html#76\">App\\Services\\Validation\\Validation::validate<\/a>"],[100,3,"<a href=\"Services\/Validation\/Validation.php.html#94\">App\\Services\\Validation\\Validation::validateField<\/a>"],[100,3,"<a href=\"Services\/Validation\/Validation.php.html#117\">App\\Services\\Validation\\Validation::parseRule<\/a>"],[100,1,"<a href=\"Support\/Cookie.php.html#11\">App\\Support\\Cookie::has<\/a>"],[100,1,"<a href=\"Support\/Cookie.php.html#21\">App\\Support\\Cookie::set<\/a>"],[100,2,"<a href=\"Support\/Cookie.php.html#30\">App\\Support\\Cookie::get<\/a>"],[100,2,"<a href=\"Support\/Cookie.php.html#39\">App\\Support\\Cookie::unset<\/a>"],[100,1,"<a href=\"Support\/Paths.php.html#7\">App\\Support\\Paths::getRootPath<\/a>"],[0,1,"<a href=\"Support\/Paths.php.html#12\">App\\Support\\Paths::getPathToConfigFile<\/a>"],[100,1,"<a href=\"Support\/Paths.php.html#17\">App\\Support\\Paths::getTemplatePath<\/a>"],[100,3,"<a href=\"Support\/UsersAuth.php.html#16\">App\\Support\\UsersAuth::login<\/a>"],[0,1,"<a href=\"Support\/UsersAuth.php.html#34\">App\\Support\\UsersAuth::createToken<\/a>"],[100,1,"<a href=\"Support\/UsersAuth.php.html#45\">App\\Support\\UsersAuth::checkPass<\/a>"],[70,5,"<a href=\"Support\/UsersAuth.php.html#53\">App\\Support\\UsersAuth::getUserByToken<\/a>"],[100,1,"<a href=\"View\/View.php.html#11\">App\\View\\View::__construct<\/a>"],[0,1,"<a href=\"View\/View.php.html#16\">App\\View\\View::setVar<\/a>"],[100,1,"<a href=\"View\/View.php.html#21\">App\\View\\View::renderHtml<\/a>"],[100,1,"<a href=\"Services\/Validation\/ValidationBag.php.html#12\">ValidationBag::required<\/a>"],[100,1,"<a href=\"Services\/Validation\/ValidationBag.php.html#21\">ValidationBag::numeric<\/a>"],[100,1,"<a href=\"Services\/Validation\/ValidationBag.php.html#30\">ValidationBag::email<\/a>"],[100,2,"<a href=\"Services\/Validation\/ValidationBag.php.html#39\">ValidationBag::boolean<\/a>"],[100,1,"<a href=\"Services\/Validation\/ValidationBag.php.html#48\">ValidationBag::url<\/a>"],[100,1,"<a href=\"Services\/Validation\/ValidationBag.php.html#57\">ValidationBag::length<\/a>"],[100,1,"<a href=\"Services\/Validation\/ValidationBag.php.html#66\">ValidationBag::string<\/a>"],[100,1,"<a href=\"Services\/Validation\/ValidationBag.php.html#75\">ValidationBag::skip<\/a>"]], 'Method Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getComplexityData(data, label) {
+    var values = [];
+    $.each(data, function(key) {
+      var value = Math.round(data[key][0]*100) / 100;
+      values.push({
+        x: value,
+        y: data[key][1],
+        class: data[key][2],
+        size: 0.05,
+        shape: 'diamond'
+      });
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+});
+  </script>
+ </body>
+</html>

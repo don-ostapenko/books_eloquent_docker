@@ -1,0 +1,28 @@
+COMMANDS
+--------
+
+#phpunit
+========
+vendor/bin/phpunit                                      - to start all tests
+vendor/bin/phpunit --filter=ParameterBagTest            - to start special test
+vendor/bin/phpunit --coverage-html=tests/Coverage       - to start code coverage
+
+
+#phinx
+===========
+phinx create CreateBooksTable                           - to create class of migration
+phinx migrate -e development                            - to start migration process
+phinx migrate -e development -t 20110103081132          - to start migration process a specific version
+
+phinx rollback -e development                           - to start rollback to the previous migration
+phinx rollback -e development -t 20120103083322         - to start rollback all migrations to a specific version
+phinx rollback -e development -t 0                      - to start rollback that revert all migrations
+
+phinx seed:create BookSeeder                            - to start create new database seed class
+phinx seed:run -e development                           - to start all of the available seed classes
+phinx seed:run -e development -s BookSeeder             - to start seeding process a specific class
+
+
+#if_needed
+==========
+nano ~/.bashrc                                          - to start nano editor for changing aliases
